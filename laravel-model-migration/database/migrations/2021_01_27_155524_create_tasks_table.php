@@ -17,7 +17,7 @@ class CreateTasksTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->mediumInteger('votes');
+            $table->mediumInteger('hours_for_complete_task');
             $table->timestamps();
         });
     }
