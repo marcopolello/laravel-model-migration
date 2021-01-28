@@ -15,10 +15,10 @@ class CreateEmployeesTable extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('lastname');
-            $table->year('birth_year');
-            $table->bigInteger('RAL')->default(0);
+            $table->string('name', 100);
+            $table->string('lastname', 100);
+            $table->date('birth_year');
+            $table->bigInteger('RAL')->unsigned();
             $table->timestamps();
         });
     }
